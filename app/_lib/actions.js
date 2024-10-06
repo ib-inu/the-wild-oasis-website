@@ -10,7 +10,7 @@ import { redirect } from "next/navigation";
 
 export async function updateGuest(formData) {
 
-
+    const session = await auth();
     const nationalID = formData.get("nationalID");
     const [nationality, countryFlag] = formData.get("nationality").split('%');
 
